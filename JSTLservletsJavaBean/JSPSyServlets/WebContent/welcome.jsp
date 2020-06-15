@@ -1,4 +1,3 @@
-<%@page import="com.javarevolutions.jsps.servlets.vo.VOLogin"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -9,7 +8,7 @@
 </head>
 <body>
 <p style = "font-weight: bolt; font-size: 20px; ">
-Bienvenido a la página: <%=((VOLogin) request.getAttribute("usuariologeado")).getNombre() %>
+Bienvenido a la página: <%=(request.getAttribute("usuariologeado")).getNombre() %>
 </p>
 
 </body>
