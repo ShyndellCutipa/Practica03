@@ -41,13 +41,8 @@ public class LoginServlet extends HttpServlet {
 		System.out.println("USUARIO : "+  usuario);
 		System.out.println("PASSWORD : "+ password);
 		if(usuario.equals("shyndell") &&  password.equals("cutipa")) {
-			VOLogin vo = new VOLogin();
-			vo.setUsuario(usuario);
-			vo.setPassword(password);
-			vo.setEdad(18);
-			vo.setNombre("Shyndell Cutipa");
 			//HttpSession session  = request.getSession(true);
-			request.setAttribute("usuariologeado", vo);
+			request.setAttribute("usuariologeado", usuario);
 			request.getRequestDispatcher("welcome.jsp").forward(request,response);
 		}else {
 			System.out.println("Tiene que ingresar el usuario incorrecto");
